@@ -15,4 +15,6 @@ class Cliente extends Model {
         'bairro',
         'ponto_referencia'
     ];
+
+    protected $dates = ['data_nascimento'];
 }
