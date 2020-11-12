@@ -5,8 +5,7 @@ namespace App\Exceptions;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
-class Handler extends ExceptionHandler
-{
+class Handler extends ExceptionHandler {
     /**
      * A list of the exception types that are not reported.
      *
@@ -21,10 +20,7 @@ class Handler extends ExceptionHandler
      *
      * @var array
      */
-    protected $dontFlash = [
-        'password',
-        'password_confirmation',
-    ];
+    protected $dontFlash = ['password', 'password_confirmation'];
 
     /**
      * Report or log an exception.
@@ -34,8 +30,7 @@ class Handler extends ExceptionHandler
      *
      * @throws \Throwable
      */
-    public function report(Throwable $exception)
-    {
+    public function report(Throwable $exception) {
         parent::report($exception);
     }
 
@@ -48,8 +43,7 @@ class Handler extends ExceptionHandler
      *
      * @throws \Throwable
      */
-    public function render($request, Throwable $exception)
-    {
+    public function render($request, Throwable $exception) {
         return parent::render($request, $exception);
     }
 }
