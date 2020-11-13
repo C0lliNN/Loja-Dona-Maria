@@ -25,23 +25,23 @@
       </nav>
     </header>
     @if ($errors->any())
-        <section class="container mt-5">
-          <div class="alert alert-danger">
-              <ul>
-                  @foreach ($errors->all() as $error)
-                      <li>{{ $error }}</li>
-                  @endforeach
-              </ul>
-          </div>
-      </section>
+        <div class="container mt-5">
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
     @endif
 
     @if (session('status'))
-      <section class="container mt-5">
+      <div class="container mt-5">
           <div class="alert alert-success">
               {{ session('status') }}
           </div>
-      </section>
+      </div>
     @endif
   
     <section class="container mt-5">
